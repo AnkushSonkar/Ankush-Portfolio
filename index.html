@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ankush-Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="/assets/portfolio.png">
+
+        <!-- Link Locomotive CSS -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.css">
+
+        <!-- shery css    -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/sheryjs/dist/Shery.css" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div id="particles-js"></div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="home">
+            <h1>Hi, I'm <span class="highlight">Ankush</span></h1>
+            <h2>Frontend Developer</h2>
+            <!-- <p>Passionate about creating innovative web solutions</p> -->
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary">Get in Touch</a>
+                <a href="#projects" class="btn secondary">View Work</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a Frontend Developer with expertise in modern web
+                        technologies. My journey in tech started with a passion
+                        for solving problems and creating user-friendly
+                        applications.</p>
+                    <p>I specialize in:</p>
+                    <ul>
+                        <li>Frontend Development (React, Tailwind CSS,
+                            GSAP)</li>
+                        <li>Programming Languages (JavaScript, HTML,
+                            CSS)</li>
+                        <li>Backend Development
+                            (Node.js, Express)</li>
+                        <li>Version Control (Git, GitHub)</li>
+                        <li>Cloud Services (Vercel)</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="./assets/img1.jpg" alt="Profile Picture1">
+                    <img src="./assets/ankush2.jpg" alt="Profile Picture2">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a target="_blank"
+                            href="https://github.com/AnkushSonkar/Obys-Agency">
+                            <video
+                                muted
+                                src="/assets/obys_video.mp4">
+                            </video>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a target="_blank"
+                            href="https://github.com/AnkushSonkar/Bubble_Game">
+                            <video
+                                muted
+                                src="/assets/bubbleGame_video.mp4">
+                            </video>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" target="_blank">
+                            <img
+                                src="/assets/work-progress-coming-soon.jpg"
+                                alt>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://github.com/AnkushSonkar/Premier"
+                            target="_blank">
+                            <video class="swiper-video"
+                                src="/assets/premier_video.mp4">
+                            </video>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5/CSS3</li>
+                        <li>Tailwind</li>
+                        <li>Gsap</li>
+                        <li>JavaScript</li>
+                        <li>React.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>MongoDB</li>
+                        <li>REST APIs</li>
+                        <li>Git/Github</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Name: XYZ</p>
+                    <p>Email: your.email@example.com</p>
+                    <div class="social-links">
+                        <a
+                            href="https://www.linkedin.com/in/ankush-sonkar-4a6478248"
+                            target="_blank">LinkedIn</a>
+                        <a href="https://github.com/AnkushSonkar"
+                            target="_blank">GitHub</a>
+                        <a href="https://www.instagram.com/ankushsonkar_"
+                            target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <form class="contact-form" target="_blank"
+                    action="https://formsubmit.co/ankushsonkar987@gmail.com"
+                    method="POST">
+                    <input type="text" placeholder="Your Name" name="name"
+                        required>
+                    <input type="email" placeholder="Your Email" name="email"
+                        required>
+                    <textarea rows="5" placeholder="Your Message" name="message"
+                        required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>Copyright &copy; 2025 <span id="cp-highlight">Ankush</span>.</p>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <!-- locomotive js  -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+        <!--  Gsap is needed for Basic Effects -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+        <!-- Scroll Trigger is needed for Scroll Effects -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+        <!-- Three.js is needed for 3d Effects -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+        <!-- ControlKit is needed for Debug Panel -->
+        <script
+            src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+        <!-- shery js -->
+        <script type="text/javascript"
+            src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+        <!-- Swiper JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>
