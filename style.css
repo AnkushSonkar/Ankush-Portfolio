@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none !important;
 }
 
 body {
@@ -9,7 +10,6 @@ body {
   color: #fff;
   overflow-x: hidden;
   background: #000000;
-  cursor: none !important;
 }
 
 ::-webkit-scrollbar {
