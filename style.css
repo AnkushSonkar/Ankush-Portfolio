@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   cursor: none !important;
+  user-select: none;
 }
 
 body {
@@ -186,6 +187,7 @@ section {
 
 .about-image {
   text-align: center;
+  border-radius: 50% !important;
 }
 .about-image img {
   width: 80%;
@@ -194,33 +196,6 @@ section {
   border-radius: 50% !important;
   box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
 }
-
-/* Projects Section */
-/* .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 20px;
-  transition: transform 0.3s ease;
-  opacity: 0;
-  transform: translateY(50px);
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 15px;
-} */
 
 /* custom style for swiper */
 
@@ -272,6 +247,10 @@ section {
   transform: scale(1.2);
   background-color: #64ffda !important;
   opacity: 1;
+}
+
+.card-swiper {
+  display: none;
 }
 
 /* Skills Section */
@@ -406,7 +385,7 @@ footer {
   color: #64ffda;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .about-content,
   .contact-content {
     grid-template-columns: 1fr;
@@ -426,5 +405,74 @@ footer {
 
   .btn {
     padding: 1.5vw 3vw;
+  }
+
+  .coverflow-swiper {
+    display: none;
+  }
+
+  /* card swiper */
+  .card-swiper {
+    display: block;
+    margin-top: 28vh;
+  }
+
+  .swiper {
+    width: 200px;
+    height: 130px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #000000;
+    border: 0.2px solid rgba(255, 255, 255, 0.308);
+  }
+
+  /* .swiper-slide:nth-child(1n) {
+    background-color: rgb(206, 17, 17);
+  }
+
+  .swiper-slide:nth-child(2n) {
+    background-color: rgb(0, 140, 255);
+  }
+
+  .swiper-slide:nth-child(3n) {
+    background-color: rgb(10, 184, 111);
+  }
+
+  .swiper-slide:nth-child(4n) {
+    background-color: rgb(211, 122, 7);
+  }
+
+  .swiper-slide:nth-child(5n) {
+    background-color: rgb(118, 163, 12);
+  }
+
+  .swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+  }
+
+  .swiper-slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+  }
+
+  .swiper-slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+  }
+
+  .swiper-slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+  }
+
+  .swiper-slide:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+  } */
+
+  .swiper > .swiper-pagination {
+    position: relative;
+    margin-top: 40px;
   }
 }

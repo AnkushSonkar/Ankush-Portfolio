@@ -150,52 +150,6 @@ function initAnimations() {
   });
 }
 
-//  Initialize Swiperfunction swiperJs() {
-function swiperJs() {
-  var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    loop: true,
-    centeredSlides: true,
-    slidesPerView: 3,
-    spaceBetween: 50,
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    on: {
-      init: () => {
-        document.querySelector(".swiper-button-next").style.color = "#64ffda";
-        document.querySelector(".swiper-button-prev").style.color = "#64ffda";
-      },
-    },
-  });
-
-  let videos = document.querySelectorAll(".swiper-slide>a>video");
-
-  videos.forEach((elem) => {
-    elem.addEventListener("mouseenter", () => {
-      elem.play();
-      elem.playbackRate = 1.5;
-    });
-
-    elem.addEventListener("mouseleave", () => {
-      elem.pause();
-    });
-  });
-}
-
 function sheryAnimation() {
   Shery.mouseFollower({
     skew: true,
@@ -212,7 +166,75 @@ function sheryAnimation() {
   });
 }
 
+//  Initialize Swiperfunction swiperJs() {
+
+let swiper; // Declare swiper globally for reuse
+
+function swiperJs() {
+  // Check if swiper is initialized and is a valid Swiper instance
+  if (swiper && swiper.destroy instanceof Function) {
+    console.log("Destroying previous Swiper instance");
+    swiper.destroy(true, true); // Destroy previous swiper instance
+    swiper = null; // Reset swiper instance
+  }
+
+  if (window.innerWidth > 767) {
+    swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 3,
+      spaceBetween: 50,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        init: () => {
+          document.querySelector(".swiper-button-next").style.color = "#64ffda";
+          document.querySelector(".swiper-button-prev").style.color = "#64ffda";
+        },
+      },
+    });
+  } else {
+    swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  }
+  let videos = document.querySelectorAll(".swiper-slide>a>video");
+  videos.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      elem.play();
+      elem.playbackRate = 1.5;
+    });
+
+    elem.addEventListener("mouseleave", () => {
+      elem.pause();
+    });
+  });
+}
+
+// Initialize functions
+window.addEventListener("resize", swiperJs);
+
 initParticles();
 initAnimations();
-swiperJs();
 sheryAnimation();
+// swiperJs();
